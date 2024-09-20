@@ -1,9 +1,9 @@
+import BlogView from '@/views/BlogView.vue'
 import HomeView from '@/views/HomeView.vue'
+import RomeView from '@/views/RomeView.vue'
 import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
-
-
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -11,11 +11,15 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/about',
-      name: 'about',
-
-     
-    }
+      path: '/blog',
+      name: 'blog',
+      component: BlogView
+    },
+    {
+      path: '/room',
+      name: 'room',
+      component: RomeView
+    },
   ]
 })
 

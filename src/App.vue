@@ -1,9 +1,17 @@
-<script setup>
+<script setup></script>
+<script>
 import { RouterLink, RouterView } from "vue-router";
-</script>
 
+import TheHeader from "@/components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
+export default {
+  components: { TheHeader, TheFooter },
+};
+</script>
 <template>
-  <RouterView />
+  <the-header></the-header>
+  <RouterView></RouterView>
+  <the-footer></the-footer>
 </template>
 
 <style scoped></style>
